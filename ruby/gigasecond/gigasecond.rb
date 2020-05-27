@@ -11,7 +11,7 @@ To get started with TDD, see the `README.md` file in your
 
 class Gigasecond
    def self.from(start_time)
-      return start_time + 1000000000
+      start_time + 1000000000
    end
 end
 
