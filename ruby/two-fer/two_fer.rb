@@ -15,6 +15,6 @@ To get started with TDD, see the `README.md` file in your
 
 class TwoFer
    def self.two_fer(name = "you")
-      return "One for #{name}, one for me."
+      "One for #{name}, one for me."
    end   
 end
