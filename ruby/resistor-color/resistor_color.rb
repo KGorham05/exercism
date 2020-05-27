@@ -9,6 +9,6 @@ To get started with TDD, see the `README.md` file in your
 class ResistorColor
    COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"]
    def self.color_code(color)
-      return COLORS.find_index(color)
+      COLORS.find_index(color)
    end
 end 
