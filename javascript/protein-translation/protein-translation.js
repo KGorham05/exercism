@@ -10,6 +10,11 @@ export const translate = () => {
     "Tryptophan": ["UGG"],
     "STOP" : ["UAA", "UAG", "UGA"]
   }
+
+
+
+
+  
 };
 
 // Translate RNA sequences into proteins.
