@@ -3,9 +3,7 @@
 class Acronym
 
   def self.abbreviate(string)
-    abbreviation = ""
-    string.sub("-", " ").split.map { |word| abbreviation += word[0].upcase}
-    abbreviation
+    string.sub("-", " ").split.map { |word| word[0].upcase}.join()
   end
 
 end
