@@ -1,6 +1,6 @@
-export const translate = () => {
-  rnaToProtienMap = {
-    // Codon	Protein
+export const translate = (codons) => {
+  const PROTEIN_MAP = {
+    // Protein : Codon
     "Methionine": ["AUG"],
     "Phenylalanine": ["UUU", "UUC"],
     "Leucine": ["UUA", "UUG"],
@@ -11,12 +11,18 @@ export const translate = () => {
     "STOP" : ["UAA", "UAG", "UGA"]
   }
 
+  let codonArr = codons.match
 
+  // let proteins = codons.map(codon => {
+  //   PROTEIN_MAP.
+  // });
+  
 
-
+  return proteins;
   
 };
 
+translate();
 // Translate RNA sequences into proteins.
 
 // RNA can be broken into three nucleotide sequences called codons, and then translated to a polypeptide like so:
