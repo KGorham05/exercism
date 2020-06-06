@@ -17,7 +17,6 @@ export const translate = (codons) => {
     let codon_arr = codons.match(/.{1,3}/g)
     for (let i = 0; i < codon_arr.length; i++) {
       let protein = Object.keys(PROTEIN_MAP).find(key => PROTEIN_MAP[key].includes(codon_arr[i]))
-      console.log(protein)
       if (!protein) {
         throw "Invalid codon"
       } else if (protein == "STOP") {
