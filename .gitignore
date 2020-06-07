@@ -65,3 +65,9 @@ typings/
 
 # Webstorm
 .idea/
+
+shell
+LICENSE
+README.md 
+exercism.exe
+
