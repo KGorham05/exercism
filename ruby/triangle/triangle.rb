@@ -29,9 +29,9 @@ class Triangle
     end
   end
 
-  # def isosceles?
-  
-  # end
+  def isosceles?
+    sides.uniq.size == 1 || 2
+  end
 
   # def scaline?
   
