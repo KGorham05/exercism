@@ -1,22 +1,17 @@
 export class Triangle {
-  constructor(s1, s2, s3) {
-    this.sides = [s1, s2, s3]
+  constructor(...args) {
+    this.sides = args
     this.unique = [...new Set(this.sides)].length
+    this.maxValue = Math.max(...args)
+    this.sumOfSmallerSides = args.reduce((acc, val) => acc + val) - this.maxValue;
   }
 
-  isTriangle() {
-    return ( this.sides[0] === 0 || this.sides[1] === 0 || this.sides[2] === 0 ) ? false : true
-  }
+  isTriangle = () => (this.sides.indexOf(0 != -1) ? true : false) && this.sumOfSmallerSides > this.maxValue
   
-  isEquilateral() {
-    return this.isTriangle() ? this.unique === 1 ? true : false : false
-  }
+  isEquilateral = () => this.isTriangle() ? this.unique === 1 ? true : false : false
 
-  isIsosceles() {
-    return this.isTriangle() ? this.unique === 2 ? true : false : false
-  }
-
-  isScalene() {
-    return this.isTriangle() ? this.unique === 3 ? true : false : false
-  }
+  isIsosceles = () => this.isTriangle() ? this.unique === 1 || this.unique === 2 ? true : false : false
+  
+  isScalene = () => this.isTriangle() ? this.unique === 3 ? true : false : false
+  
 }
