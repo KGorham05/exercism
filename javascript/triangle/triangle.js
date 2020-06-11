@@ -8,10 +8,10 @@ export class Triangle {
 
   isTriangle = () => (this.sides.indexOf(0 != -1) ? true : false) && this.sumOfSmallerSides > this.maxValue
   
-  isEquilateral = () => this.isTriangle() ? this.unique === 1 ? true : false : false
+  isEquilateral = () => this.isTriangle() && (this.unique === 1 ? true : false) 
 
-  isIsosceles = () => this.isTriangle() ? this.unique === 1 || this.unique === 2 ? true : false : false
+  isIsosceles = () => this.isTriangle() && (this.unique === 1 || this.unique === 2 ? true : false)
   
-  isScalene = () => this.isTriangle() ? this.unique === 3 ? true : false : false
+  isScalene = () => this.isTriangle() && (this.unique === 3 ? true : false) 
   
 }
