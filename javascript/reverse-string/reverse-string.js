@@ -1,5 +1,5 @@
 // Solution 1 - Recursive Ternary
-export const reverseString = text => text ? reverseString(text.substr(1)) + text[0] : ''
+export const reverseString = s => s ? reverseString(s.substr(1)) + s[0] : ''
 
 // Solution 2 - while (i--)
 // export const reverseString = (text) => {
