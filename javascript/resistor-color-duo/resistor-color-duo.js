@@ -6,6 +6,6 @@ const COLORS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "v
 //   return parseInt(`${firstValue}${secondValue}`)
 // };
 
-export const decodedValue = (colors) => {
-  return COLORS.indexOf(colors.shift()) * 10 + COLORS.indexOf(colors.shift());
+export const decodedValue = ([firstColor, secondColor]) => {
+  return COLORS.indexOf(firstColor) * 10 + COLORS.indexOf(secondColor);
 };
