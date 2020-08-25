@@ -3,12 +3,10 @@ class Microwave
   def initialize (time)
     @time = time
     @arrOfDigits = time.digits
-    @numDigits = @arrOfDigits.count
   end
 
   def timer
-  # If the enter 1 digit, display that as seconds
-    case @numDigits
+    case @arrOfDigits.count
       when 1
         "00:0#{@time}" 
       when 2
@@ -26,10 +24,9 @@ class Microwave
       when 3
         "0#{@arrOfDigits[2]}:#{@arrOfDigits[1]}#{@arrOfDigits[0]}"
       else
-        "#{@arrOfDigits[3]}#{@arrOfDigits[2]}:#{@arrOfDigits[1]}#{@arrOfDigits.count[0]}"
+        "#{@arrOfDigits[3]}#{@arrOfDigits[2]}:#{@arrOfDigits[1]}#{@arrOfDigits[0]}"
     end
   end
-
 
 end
 
