@@ -27,7 +27,7 @@ class Microwave
         "#{@arrOfDigits[3]}#{@arrOfDigits[2]}:#{@arrOfDigits[1]}#{@arrOfDigits[0]}"
     end
   end
-
+  
 end
 
 
