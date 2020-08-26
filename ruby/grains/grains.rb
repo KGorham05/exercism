@@ -2,7 +2,7 @@ class Grains
 
   def self.square(n)
     # If invalid input, throw error
-    raise ArgumentError.new("Must input a number > 0") if n <= 0 || n > 64
+    raise ArgumentError.new("Must input a number between 1 and 64") if n <= 0 || n > 64
 
     @arrayOfSquares = []
     for i in 1..n do
