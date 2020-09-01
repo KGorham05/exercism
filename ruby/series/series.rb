@@ -1,13 +1,13 @@
 class Series
 
   def initialize (series)
-    @seriesAsArr = series.split("")
+    @series_as_arr = series.chars
   end
 
   def slices(n)
-    raise ArgumentError.new("Slice size is greater than the size of the array") if n > @seriesAsArr.length
+    raise ArgumentError.new("Slice size is greater than the size of the array") if n > @series_as_arr.length
        
-    arrayOfSlices = @seriesAsArr.each_cons(n).map(&:join)
+    arrayOfSlices = @series_as_arr.each_cons(n).map(&:join)
   end
 
 end

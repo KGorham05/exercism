@@ -1,4 +1,18 @@
-# V3 Final
+# V5 Final 
+# class Grains
+
+#   def self.square(n)
+#     raise ArgumentError.new("Must input a number between 1 and 64") if n <= 0 || n > 64
+#     2**(n - 1)
+#   end
+
+#   def self.total
+#     2**(64) - 1
+#   end
+
+# end
+
+# V4
 class Grains
 
   def self.square(n)
@@ -6,18 +20,33 @@ class Grains
     2**(n - 1)
   end
 
-  def self.total
-    2**(64) - 1
+  def self.total(n = 64)
+    n.times.map{|i| 2**i}.sum
   end
 
 end
 
-#V2
+# V3
 # class Grains
 
 #   def self.square(n)
 #     raise ArgumentError.new("Must input a number between 1 and 64") if n <= 0 || n > 64
 
+#     @arrayOfSquares = n.times.collect{|i| 2**i}
+#     @arrayOfSquares[n-1]
+#   end
+
+#   def self.total
+#     self.square(64)
+#     @arrayOfSquares.sum()
+#   end
+# end
+
+# V2
+# class Grains
+
+#   def self.square(n)
+#     raise ArgumentError.new("Must input a number between 1 and 64") if n <= 0 || n > 64
 #     @arrayOfSquares = []
 #     for i in 1..n do
 #         @arrayOfSquares.push(2**(i-1))
