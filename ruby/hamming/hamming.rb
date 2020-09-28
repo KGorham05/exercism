@@ -9,7 +9,6 @@ module Hamming
   end
 end
 
-Hamming.compute('GGACGGATTCTG', 'AGGACGGATTCT')
 #v2 Recursive Solution
 # module Hamming
 

@@ -9,12 +9,9 @@ class Sieve
   def primes 
     primes = []
     digits_to_check.each { |num| 
-      # Add it to the primes array
       primes.push(num)
-      
       multiple = 2
       product = num * 1
-      # remove all of it's multiples up to the limit
       while product < limit do
         product = num * multiple
         if digits_to_check.include?(product)
@@ -23,7 +20,6 @@ class Sieve
         multiple += 1
       end
     }
-    # Return an array of all primes up to the limit
     primes
   end
 
