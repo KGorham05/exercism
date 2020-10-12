@@ -5,7 +5,7 @@ class Nucleotide
     @dna = dna
     raise ArgumentError unless dna.chars.all? { |char| NUCLEOTIDES.include?(char) }
   end
-
+  
   def self.from_dna(dna)
     new(dna)
   end
