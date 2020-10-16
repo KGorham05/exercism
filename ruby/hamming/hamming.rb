@@ -4,7 +4,7 @@ module Hamming
     if first_strand.length != second_strand.length 
       raise ArgumentError.new("Must input two equal length strings to compute Hamming difference")
     else 
-    first_strand.split("").zip(second_strand.split("")).count {|arr| arr[0] != arr[1] }
+    first_strand.split("").zip(second_strand.chars).count {|x, y| x != y }
     end
   end
 end
