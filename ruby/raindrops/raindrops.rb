@@ -5,7 +5,7 @@ class Raindrops
   def self.convert(n)
     converted = ""
     RAINDROPS.each { |prime, noise| converted += noise if n % prime == 0 }
-    converted.empty? ? converted = n.to_s : converted
+    converted.empty? ? n.to_s : converted
   end
 end
 
@@ -13,7 +13,6 @@ end
 # class Raindrops
 
 #   def self.convert(n)
-#     three_is_a_factor, five_is_a_factor, seven_is_a_factor = false
 #     converted = ""
 
 #     if (n % 3 == 0)
@@ -26,7 +25,7 @@ end
 #       converted +="Plong"
 #     end
 
-#     converted.empty? ? converted = n.to_s : converted
+#     converted.empty? ? n.to_s : converted
 #   end
 
 # end
