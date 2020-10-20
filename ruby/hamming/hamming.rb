@@ -4,7 +4,7 @@ module Hamming
     if first_strand.length != second_strand.length 
       raise ArgumentError.new("Must input two equal length strings to compute Hamming difference")
     end
-    first_strand.split("").zip(second_strand.chars).count {|x, y| x != y }
+    first_strand.chars.zip(second_strand.chars).count {|x, y| x != y }
   end
 end
 
@@ -32,25 +32,6 @@ end
 #     compute(s1, s2, i, total, length_has_been_checked)
 #   end
 
-# end
-
-
-#v1
-# module Hamming
-
-#   def self.compute(first_strand, second_strand)
-#     if first_strand.length != second_strand.length 
-#       raise ArgumentError.new("Must input two equal length strings to compute Hamming difference")
-#     else 
-#     @hammingNumber = 0 
-#     first_strand.chars.map.with_index {|char, i|
-#      if char != second_strand[i]
-#        @hammingNumber += 1
-#      end
-#     }
-#     @hammingNumber
-#     end
-#   end
 # end
 
 
