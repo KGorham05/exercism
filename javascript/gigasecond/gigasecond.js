@@ -1,8 +1,2 @@
-//
-// This is only a SKELETON file for the 'Gigasecond' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
+export const gigasecond = (moment) => new Date(Date.parse(moment) + 1000000000000);
 
-export const gigasecond = () => {
-  throw new Error("Remove this statement and implement this function");
-};
