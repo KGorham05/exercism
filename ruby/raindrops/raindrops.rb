@@ -1,4 +1,4 @@
-# v1 - My first solution, easier to follow logic. 
+# v1 - My first solution, easier to follow logic
 class Raindrops
   def self.convert(n)
     converted = ""

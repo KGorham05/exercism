@@ -1,7 +1,7 @@
 //   Bob is a lackadaisical teenager. In conversation, his responses are very limited.
 export const hey = message => {
   message = message.trim();
-  const isYelling = message.toUpperCase() === message && /[a-zA-Z]/.test(message);
+  const isYelling = message.toUpperCase() === message && /[A-Z]/.test(message);
   const isQuestion = message.endsWith("?");
 
   if (!message) return "Fine. Be that way!";

@@ -23,22 +23,22 @@ export class LinkedList {
 
   pop() {
     const lastNode = this.traverse();
-    const valueToReturn = lastNode.value;
+    const value = lastNode.value;
     if (lastNode.previous) {
       lastNode.previous.next = null;
     } else {
       this.head = null;
     }
-    return valueToReturn;
+    return value;
   }
 
   shift() {
-    const valueToReturn = this.head.value;
+    const value = this.head.value;
     this.head = this.head.next;
     if (this.head) {
       this.head.previous = null;
     }
-    return valueToReturn;
+    return value;
   }
 
   unshift(value) {
