@@ -51,29 +51,18 @@ export class LinkedList {
 
   delete(value, node = this.head) {
     if (node.value == value) {
-      if (!node.previous && !node.next) {
-        this.head = null;
-      }
-      if (!node.previous && node.next) {
-        this.head = node.next;
-      } 
-      if (node.next) {
-        node.next.previous = null;
-      }
       if (node.previous) {
-        node.previous.next = null;
-      }
-      if (node.previous && node.next) {
         node.previous.next = node.next;
+      } else {
+        this.head = node.next;
+      }
+      if (node.next) {
         node.next.previous = node.previous;
       }
-      node = null;
-      return;
     } else {
       if (node.next) {
         return this.delete(value, node.next);
-      } 
-      return;
+      }
     }
   }
 
