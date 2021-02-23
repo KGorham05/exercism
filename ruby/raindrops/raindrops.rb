@@ -1,11 +1,13 @@
-# v1 - My first solution, easier to follow logic
 class Raindrops
-  def self.convert(number)
-    sound = ''
-    sound << 'Pling' if (number % 3).zero?
-    sound << 'Plang' if (number % 5).zero?
-    sound << 'Plong' if (number % 7).zero?
+  RAINDROPS = {
+    3 => "Pling",
+    5 => "Plang",
+    7 => "Plong"
+  }
 
+  def self.convert(number)
+    sound = ""
+    RAINDROPS.each { |prime, noise| sound << noise if (number % prime).zero? }
     sound.empty? ? number.to_s : sound
   end
 end
